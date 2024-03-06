@@ -12,3 +12,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Spring project
 - Controller, Const
 - Info Rest service
+- ADT 3.0.2 XSD (https://basisdatensatz.de/xml/oBDS_v3.0.2.xsd)
