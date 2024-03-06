@@ -1,0 +1,6 @@
+server:
+  port: ${APPLICATION_PORT:8111}
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
