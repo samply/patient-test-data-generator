@@ -7,6 +7,7 @@ public class PatientTestDataGeneratorConst {
 
     // REST Services
     public final static String INFO = "/info";
+    public final static String GENERATE = "/generate";
 
 
 }

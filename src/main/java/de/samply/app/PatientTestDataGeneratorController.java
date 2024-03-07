@@ -16,5 +16,11 @@ public class PatientTestDataGeneratorController {
         return new ResponseEntity<>(projectVersion, HttpStatus.OK);
     }
 
+    @GetMapping(value = PatientTestDataGeneratorConst.GENERATE)
+    public ResponseEntity<String> generate() {
+        //TODO
+        return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+    }
+
 
 }
