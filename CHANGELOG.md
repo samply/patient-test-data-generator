@@ -16,3 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - XJC: Generation of classes from ADT XSD
 - Test Data Generator component
 - Generate Rest service
+- Write test data in temporal file (serialization through XmlMapper)

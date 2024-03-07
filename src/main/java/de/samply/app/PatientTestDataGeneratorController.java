@@ -1,6 +1,7 @@
 package de.samply.app;
 
 import de.samply.generator.TestDataGenerator;
+import de.samply.generator.TestDataGeneratorException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
@@ -36,7 +37,7 @@ public class PatientTestDataGeneratorController {
     }
 
     @GetMapping(value = PatientTestDataGeneratorConst.GENERATE)
-    public ResponseEntity<Resource> generate() throws IOException {
+    public ResponseEntity<Resource> generate() throws IOException, TestDataGeneratorException {
         return downloadDocument(testDataGenerator.generate());
     }
 
