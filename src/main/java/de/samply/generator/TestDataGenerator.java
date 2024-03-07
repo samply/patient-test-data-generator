@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.UUID;
 
 @Component
@@ -21,6 +22,7 @@ public class TestDataGenerator {
     private final String temporalDirectory;
     private final String testdataFilenamePrefix;
     private final DateTimeFormatter formatter;
+    private final int numberOfPatients = 10; // TODO: Give as paramter in controller
     private XmlMapper xmlMapper = (XmlMapper) new XmlMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
 
@@ -40,8 +42,23 @@ public class TestDataGenerator {
 
     private OBDS generateTestData() {
         OBDS obds = new OBDS();
+        obds.setMengePatient(createMengePatient());
         //TODO: Create test data
         return obds;
+    }
+
+    private OBDS.MengePatient createMengePatient() {
+        OBDS.MengePatient mengePatient = new OBDS.MengePatient();
+        List<OBDS.MengePatient.Patient> patientList = mengePatient.getPatient();
+        for (int i= 0; i< numberOfPatients; i++){
+            patientList.add(createPatient());
+        }
+        return mengePatient;
+    }
+
+    private OBDS.MengePatient.Patient createPatient(){
+        //TODO
+        return null;
     }
 
     private Path writeInFile(OBDS testData) throws TestDataGeneratorException {
@@ -57,7 +74,7 @@ public class TestDataGenerator {
     private String fetchCurrentInstant() {
         return this.formatter.format(Instant.now().atZone(ZoneId.systemDefault()));
     }
-    
+
     private void writeInFile(Path path, OBDS testData) throws TestDataGeneratorException {
         try {
             writeInFileWithoutExceptionHandling(path, testData);
