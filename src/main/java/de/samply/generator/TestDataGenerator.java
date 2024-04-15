@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.samply.app.PatientTestDataGeneratorConst;
 import de.samply.model.OBDS;
+import de.samply.probabilities.ProbabilityConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +23,7 @@ public class TestDataGenerator {
     private final String temporalDirectory;
     private final String testdataFilenamePrefix;
     private final DateTimeFormatter formatter;
+    private final ProbabilityConfig probabilityConfig;
     private final int numberOfPatients = 10; // TODO: Give as paramter in controller
     private XmlMapper xmlMapper = (XmlMapper) new XmlMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -29,10 +31,12 @@ public class TestDataGenerator {
     public TestDataGenerator(
             @Value(PatientTestDataGeneratorConst.TEMPORAL_DIRECTORY_SV) String temporalDirectory,
             @Value(PatientTestDataGeneratorConst.TEST_DATA_FILENAME_PREFIX_SV) String testdataFilenamePrefix,
-            @Value(PatientTestDataGeneratorConst.TEST_DATA_FILENAME_TIME_FORMAT_SV) String timeformat) {
+            @Value(PatientTestDataGeneratorConst.TEST_DATA_FILENAME_TIME_FORMAT_SV) String timeformat,
+            ProbabilityConfig probabilityConfig) {
         this.temporalDirectory = temporalDirectory;
         this.testdataFilenamePrefix = testdataFilenamePrefix;
         this.formatter = DateTimeFormatter.ofPattern(timeformat);
+        this.probabilityConfig = probabilityConfig;
     }
 
 

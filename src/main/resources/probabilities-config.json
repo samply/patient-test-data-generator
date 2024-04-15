@@ -1,0 +1,8 @@
+{
+  "GENDER" : [
+    {"enum-value": "MALE", "probability" : "0,4"},
+    {"enum-value": "FEMALE", "probability" : "0,4"},
+    {"enum-value": "OTHER", "probability" : "0,2"}],
+  "AGE" : [
+    {"min-integer-value": "0", "max-integer-value": "10", "probability": "0.1"}]
+}
