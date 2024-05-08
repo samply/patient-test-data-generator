@@ -1,8 +1,12 @@
 {
   "GENDER" : [
-    {"enum-value": "MALE", "probability" : "0.4"},
-    {"enum-value": "FEMALE", "probability" : "0.4"},
-    {"enum-value": "OTHER", "probability" : "0.2"}],
+    {"enum-value": "M", "probability" : "0.4"},
+    {"enum-value": "W", "probability" : "0.4"},
+    {"enum-value": "D", "probability" : "0.2"}],
   "AGE" : [
-    {"min-integer-value": "0", "max-integer-value": "10", "probability": "0.1"}]
+    {"min-integer-value": "0", "max-integer-value": "12", "probability": "0.2"},
+    {"min-integer-value": "13", "max-integer-value": "17", "probability": "0.2"},
+    {"min-integer-value": "18", "max-integer-value": "24", "probability": "0.2"},
+    {"min-integer-value": "25", "max-integer-value": "54", "probability": "0.2"},
+    {"min-integer-value": "55", "max-integer-value": "100", "probability": "0.2"}]
 }
