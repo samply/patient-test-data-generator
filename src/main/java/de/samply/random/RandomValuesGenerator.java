@@ -43,30 +43,29 @@ public class RandomValuesGenerator {
   }
 
   private String fetchValue(Probability probability, ProbabilityType probabilityType) {
-    //TODO
     Random random = new Random();
     // If probability is an individual value
     if (probability.getEnumValue() != null) {
       return probability.getEnumValue();
     }
     if (probability.getIntegerValue() != null) {
-      return "" + probability.getIntegerValue();
+      return String.valueOf(probability.getIntegerValue());
     }
     if (probability.getDoubleValue() != null) {
-      return "" + probability.getDoubleValue();
+      return String.valueOf(probability.getDoubleValue());
     }
     // If probability is an interval
     if (probability.getMinIntegerValue() != null && probability.getMaxIntegerValue() != null) {
-      // TODO: Generate random integer between min and max
-      return "" + random.nextInt(
+      // Generate random integer between min and max
+      return String.valueOf(random.nextInt(
           probability.getMaxIntegerValue() - probability.getMinIntegerValue() + 1)
-          + probability.getMinIntegerValue();
+          + probability.getMinIntegerValue());
     }
     if (probability.getMinDoubleValue() != null && probability.getMaxDoubleValue() != null) {
-      // TODO: Generate random integer between min and max
-      return "" + random.nextDouble(
+      // Generate random integer between min and max
+      return String.valueOf(random.nextDouble(
           probability.getMaxDoubleValue() - probability.getMinDoubleValue() + 1)
-          + probability.getMinDoubleValue();
+          + probability.getMinDoubleValue());
     }
     throw new RandomValuesGeneratorException(
         "Probability type " + probabilityType + " is not well defined");

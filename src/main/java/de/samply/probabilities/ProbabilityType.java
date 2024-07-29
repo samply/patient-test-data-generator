@@ -2,5 +2,8 @@ package de.samply.probabilities;
 
 public enum ProbabilityType {
     GENDER,
-    AGE
+    AGE,
+    FIRST_NAME_FEMALE,
+    FIRST_NAME_MALE,
+    LAST_NAME
 }
