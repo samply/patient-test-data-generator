@@ -14,7 +14,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
+
+
 
 @Component
 public class TestDataGenerator {
@@ -23,7 +26,7 @@ public class TestDataGenerator {
   private final String testdataFilenamePrefix;
   private final DateTimeFormatter formatter;
   private final PatientGenerator patientGenerator;
-  private final int numberOfPatients = 10; // TODO: Give as paramter in controller
+  private final int numberOfPatients = 10; // TODO: Give as parameter in controller
   private XmlMapper xmlMapper = (XmlMapper) new XmlMapper().enable(
       SerializationFeature.INDENT_OUTPUT);
 
@@ -41,7 +44,7 @@ public class TestDataGenerator {
 
 
   public Path generate() throws TestDataGeneratorException {
-    return writeInFile(generateTestData());
+      return writeInFile(generateTestData());
   }
 
   private OBDS generateTestData() {
@@ -60,7 +63,7 @@ public class TestDataGenerator {
     return mengePatient;
   }
 
-  private OBDS.MengePatient.Patient createPatient() {
+  private OBDS.MengePatient.Patient createPatient(){
     return patientGenerator.createPatient();
   }
 

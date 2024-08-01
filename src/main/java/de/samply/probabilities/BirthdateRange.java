@@ -8,7 +8,7 @@ public class BirthdateRange {
   private final LocalDate endDate;
 
   public BirthdateRange (int randomAge){
-    startDate = LocalDate.of(LocalDate.now().getYear()-randomAge-1,LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()+1);
+    startDate = LocalDate.of(LocalDate.now().getYear()-randomAge-1,LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth());
     endDate = LocalDate.of(LocalDate.now().getYear()-randomAge,LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth());
   }
   public LocalDate generateBirthdateInRange(){
