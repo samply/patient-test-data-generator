@@ -31,7 +31,7 @@ public class PatientGenerator {
   public PatientGenerator(RandomValuesGenerator randomValuesGenerator)
       throws DatatypeConfigurationException {
     this.randomValuesGenerator = randomValuesGenerator;
-    this.meldungGenerator = new MeldungGenerator();
+    this.meldungGenerator = new MeldungGenerator(randomValuesGenerator);
   }
 
 
@@ -40,8 +40,8 @@ public class PatientGenerator {
 
     Patient patient = new Patient();
     patient.setPatientID("testpatient" + this.count++);
-    patient.setMengeMeldung(createMengeMeldung());
     patient.setPatientenStammdaten(createPatientStammdaten());
+    patient.setMengeMeldung(createMengeMeldung());
     return patient;
   }
 

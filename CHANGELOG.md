@@ -23,3 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Generate Last Name
 - Generate First Name with genderspecification
 - Generate Histologie
+- Generate SYST
+- Generate ST
+- Generate Nebenwirkung

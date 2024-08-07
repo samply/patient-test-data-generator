@@ -7,6 +7,7 @@ import de.samply.model.OBDS.MengeMelder;
 import de.samply.model.OBDS.MengePatient.Patient;
 import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung;
 import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung.Meldung;
+import de.samply.model.STTyp;
 import de.samply.model.TumorzuordnungTyp;
 import de.samply.probabilities.ProbabilityType;
 import de.samply.random.RandomValuesGenerator;
@@ -20,11 +21,15 @@ import org.springframework.stereotype.Component;
 public class MeldungGenerator {
   private final DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
   private final HistologieGenerator histologieGenerator;
+  private final STGenerator stGenerator;
+  private final SYSTGenerator systGenerator;
   private int count;
   private final int numberOfHistologie = 3;
-  public MeldungGenerator() throws DatatypeConfigurationException {
+  public MeldungGenerator(RandomValuesGenerator randomValuesGenerator) throws DatatypeConfigurationException {
     this.count = 1;
     this.histologieGenerator = new HistologieGenerator();
+    this.stGenerator = new STGenerator(randomValuesGenerator);
+    this.systGenerator = new SYSTGenerator(randomValuesGenerator);
   }
 
   public Meldung createMeldung(){
@@ -32,6 +37,8 @@ public class MeldungGenerator {
     meldung.setMeldungID(""+this.count);
     meldung.setTumorzuordnung(createTumorzuordnung());
     meldung.setDiagnose(this.createDiagnose());
+    meldung.setST(this.stGenerator.createST());
+    meldung.setSYST(this.systGenerator.createSYST());
     meldung.getDiagnose().setHistologie(this.histologieGenerator.createHistologie());
     this.count++;
     return meldung;

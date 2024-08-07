@@ -5,5 +5,10 @@ public enum ProbabilityType {
     AGE,
     FIRST_NAME_FEMALE,
     FIRST_NAME_MALE,
-    LAST_NAME
+    LAST_NAME,
+    INTENTION,
+    STELLUNG_OP,
+    ENDE_GRUND,
+    NEBENWIRKUNG_GRAD,
+    NEBENWIRKUNG_VERSION
 }
