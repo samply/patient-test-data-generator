@@ -7,6 +7,7 @@ import de.samply.model.OBDS.MengeMelder;
 import de.samply.model.OBDS.MengePatient.Patient;
 import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung;
 import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung.Meldung;
+import de.samply.model.OPTyp;
 import de.samply.model.STTyp;
 import de.samply.model.TumorzuordnungTyp;
 import de.samply.probabilities.ProbabilityType;
@@ -14,6 +15,7 @@ import de.samply.random.RandomValuesGenerator;
 import java.util.Random;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 @Slf4j
@@ -23,34 +25,39 @@ public class MeldungGenerator {
   private final HistologieGenerator histologieGenerator;
   private final STGenerator stGenerator;
   private final SYSTGenerator systGenerator;
+  private final OPGenerator opGenerator;
+  private XMLGregorianCalendar birthdate;
   private int count;
   private final int numberOfHistologie = 3;
+
   public MeldungGenerator(RandomValuesGenerator randomValuesGenerator) throws DatatypeConfigurationException {
     this.count = 1;
     this.histologieGenerator = new HistologieGenerator();
     this.stGenerator = new STGenerator(randomValuesGenerator);
     this.systGenerator = new SYSTGenerator(randomValuesGenerator);
+    this.opGenerator = new OPGenerator(randomValuesGenerator);
   }
 
-  public Meldung createMeldung(){
+  public Meldung createMeldung(XMLGregorianCalendar birthdate) {
     Meldung meldung = new Meldung();
     meldung.setMeldungID(""+this.count);
     meldung.setTumorzuordnung(createTumorzuordnung());
     meldung.setDiagnose(this.createDiagnose());
-    meldung.setST(this.stGenerator.createST());
-    meldung.setSYST(this.systGenerator.createSYST());
+    meldung.setST(this.stGenerator.createST(birthdate));
+    meldung.setSYST(this.systGenerator.createSYST(birthdate));
     meldung.getDiagnose().setHistologie(this.histologieGenerator.createHistologie());
+    meldung.setOP(this.opGenerator.createOP());
     this.count++;
     return meldung;
   }
 
-  public TumorzuordnungTyp createTumorzuordnung(){
+  private TumorzuordnungTyp createTumorzuordnung(){
     TumorzuordnungTyp tumorzuordnungTyp = new TumorzuordnungTyp();
     tumorzuordnungTyp.setTumorID(""+this.count);
     return tumorzuordnungTyp;
   }
 
-  public DiagnoseTyp createDiagnose(){
+  private DiagnoseTyp createDiagnose(){
     DiagnoseTyp diagnose = new DiagnoseTyp();
     return diagnose;
   }

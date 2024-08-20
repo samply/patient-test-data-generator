@@ -26,7 +26,6 @@ public class PatientGenerator {
   private final RandomValuesGenerator randomValuesGenerator;
   private final DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
   private final MeldungGenerator meldungGenerator;
-  private final int numberOfMeldung = 5;
 
   public PatientGenerator(RandomValuesGenerator randomValuesGenerator)
       throws DatatypeConfigurationException {
@@ -35,13 +34,13 @@ public class PatientGenerator {
   }
 
 
-  public Patient createPatient() {
+  public Patient createPatient(){
     //TODO
 
     Patient patient = new Patient();
     patient.setPatientID("testpatient" + this.count++);
     patient.setPatientenStammdaten(createPatientStammdaten());
-    patient.setMengeMeldung(createMengeMeldung());
+    patient.setMengeMeldung(createMengeMeldung(patient.getPatientenStammdaten().getGeburtsdatum().getValue()));
     return patient;
   }
 
@@ -96,10 +95,11 @@ public class PatientGenerator {
     return randomValuesGenerator.generate(ProbabilityType.LAST_NAME);
   }
 
-  private MengeMeldung createMengeMeldung(){
+  private MengeMeldung createMengeMeldung(XMLGregorianCalendar birthdate){
     MengeMeldung mengeMeldung = new MengeMeldung();
-    for (int i = 0; i <= this.numberOfMeldung; i++){
-      mengeMeldung.getMeldung().add(this.meldungGenerator.createMeldung());
+    int numberOfMeldung = 5;
+    for (int i = 0; i <= numberOfMeldung; i++){
+      mengeMeldung.getMeldung().add(this.meldungGenerator.createMeldung(birthdate));
     }
     return mengeMeldung;
   }

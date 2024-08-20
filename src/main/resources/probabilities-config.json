@@ -1271,9 +1271,7 @@
       "enum-value": "X",
       "probability": "0.25"
     }
-
   ],
-
   "STELLUNG_OP": [
     {
       "enum-value": "O",
@@ -1299,27 +1297,27 @@
   "ENDE_GRUND": [
     {
       "enum-value": "A",
-      "probability": "0.166"
+      "probability": "0.1666"
     },
     {
       "enum-value": "E",
-      "probability": "0.166"
+      "probability": "0.1666"
     },
     {
       "enum-value": "V",
-      "probability": "0.166"
+      "probability": "0.1666"
     },
     {
       "enum-value": "P",
-      "probability": "0.166"
+      "probability": "0.1666"
     },
     {
       "enum-value": "U",
-      "probability": "0.166"
+      "probability": "0.1666"
     },
     {
       "enum-value": "S",
-      "probability": "0.166"
+      "probability": "0.1666"
     }
   ],
   "NEBENWIRKUNG_GRAD": [
@@ -1344,7 +1342,7 @@
       "probability": "0.2"
     }
   ],
-  "NEBENWIRKING_VERSION": [
+  "NEBENWIRKUNG_VERSION": [
     {
       "enum-value": "4",
       "probability": "0.25"
@@ -1360,6 +1358,666 @@
     {
       "enum-value": "Sonstige",
       "probability": "0.25"
+    }
+  ],
+  "RESIDUALSTATUS": [
+    {
+      "enum-value": "R0",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "R1",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "R2",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "R1(is)",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "R1(cy+)",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "RX",
+      "probability": "0.1428"
+    },
+    {
+      "enum-value": "U",
+      "probability": "0.1428"
+    }
+  ],
+  "APPLIKATIONSART": [
+    {
+      "enum-value": "P",
+      "probability": "0.25"
+    },
+    {
+      "enum-value": "K",
+      "probability": "0.25"
+    },
+    {
+      "enum-value": "M",
+      "probability": "0.25"
+    },
+    {
+      "enum-value": "S",
+      "probability": "0.25"
+    }
+  ],
+  "ST_ZIELGEBIET": [
+    {
+      "enum-value": "1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "1.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "1.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "1.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.1.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.1.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.3.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.3.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.4.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.4.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.5.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.5.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.6.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.6.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.7.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.7.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.8.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.8.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.8.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "2.9.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.1.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.1.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.3.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.3.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.4.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.4.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.5.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.5.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.6.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.6.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "3.7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.1.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.1.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.3.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.3.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.4.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.4.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.5.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.5.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.6.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.6.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.8.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.8.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.8.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.9.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.9.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "4.9.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.1.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.1.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.3.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.3.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.4.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.4.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.5.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.5.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.6.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.6.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.1.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.1.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.2.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.7.2.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.8.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.8.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.8.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.9.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.9.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.9.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.10.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.10.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.10.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.11.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.11.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.11.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "5.12.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.3.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.4.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.5.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.6.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.8.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.9.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.10.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.11.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.12.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.13.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.14.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.15.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "6.16.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "7.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "7.+",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "7.-",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "7.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "7.2.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "8.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "8.1.",
+      "probability": "0.006666"
+    },
+    {
+      "enum-value": "8.2.",
+      "probability": "0.006666"
+    }
+  ],
+  "EINHEIT": [
+    {
+      "enum-value": "Gy",
+      "probability": "0.5"
+    },
+    {
+      "enum-value": "GBq",
+      "probability": "0.5"
     }
   ]
 }

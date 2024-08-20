@@ -32,25 +32,21 @@ public class HistologieGenerator {
 
   private BigInteger generateLKUntersucht(){
     Random zufallszahl = new Random();
-    BigInteger lkUntersucht = BigInteger.valueOf(zufallszahl.nextInt(600));
-    return lkUntersucht;
+    return BigInteger.valueOf(zufallszahl.nextInt(600)+1);
   }
 
   private BigInteger generateLKBefallen(HistologieTyp histologie){
     Random zufallszahl = new Random();
-    BigInteger lkBefallen = BigInteger.valueOf(zufallszahl.nextInt(histologie.getLKUntersucht().intValue()));
-    return lkBefallen;
+    return BigInteger.valueOf(zufallszahl.nextInt(histologie.getLKUntersucht().intValue()));
   }
 
   private BigInteger generateSentinelLKUntersucht(){
     Random zufallszahl = new Random();
-    BigInteger sentinelLkUntersucht = BigInteger.valueOf(zufallszahl.nextInt(600));
-    return sentinelLkUntersucht;
+    return BigInteger.valueOf(zufallszahl.nextInt(600)+1);
   }
 
   private BigInteger generateSentinelLKBefallen(HistologieTyp histologie){
     Random zufallszahl = new Random();
-    BigInteger sentinelLkBefallen = BigInteger.valueOf(zufallszahl.nextInt(histologie.getSentinelLKUntersucht().intValue()));
-    return sentinelLkBefallen;
+    return BigInteger.valueOf(zufallszahl.nextInt(histologie.getSentinelLKUntersucht().intValue()));
   }
 }
