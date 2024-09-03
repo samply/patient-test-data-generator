@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.samply.app.PatientTestDataGeneratorConst;
 import de.samply.model.OBDS;
 import de.samply.random.RandomValuesGenerator;
+import de.samply.serializer.XmlMapperConfiguration;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,6 +13,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 import javax.xml.datatype.DatatypeConfigurationException;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,8 +29,9 @@ public class TestDataGenerator {
   private final String testdataFilenamePrefix;
   private final DateTimeFormatter formatter;
   private final PatientGenerator patientGenerator;
-  private final int numberOfPatients = 10; // TODO: Give as parameter in controller
-  private XmlMapper xmlMapper = (XmlMapper) new XmlMapper().enable(
+  private int numberOfPatients;
+  private final Scanner input = new Scanner(System.in);
+  private XmlMapper xmlMapper = (XmlMapper) XmlMapperConfiguration.createXmlMapper().enable(
       SerializationFeature.INDENT_OUTPUT);
 
 
@@ -44,8 +47,9 @@ public class TestDataGenerator {
   }
 
 
-  public Path generate() throws TestDataGeneratorException {
-      return writeInFile(generateTestData());
+  public Path generate(Integer numberOfPatients) throws TestDataGeneratorException {
+    this.numberOfPatients = numberOfPatients;
+    return writeInFile(generateTestData());
   }
 
   private OBDS generateTestData() {

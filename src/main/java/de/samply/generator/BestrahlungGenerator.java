@@ -14,6 +14,7 @@ import de.samply.random.RandomValuesGenerator;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Random;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -33,19 +34,22 @@ public class BestrahlungGenerator {
 
   public Bestrahlung createBestrahlung(XMLGregorianCalendar birthdate){
     Bestrahlung bestrahlung = new Bestrahlung();
-    bestrahlung.setBeginn(generateBeginnDatum(birthdate));
-    bestrahlung.setEnde(generateEndeDatum(bestrahlung.getBeginn()));
+    if(birthdate.getYear()<2024){
+      bestrahlung.setBeginn(generateBeginnDatum(birthdate));
+      bestrahlung.setEnde(generateEndeDatum(bestrahlung.getBeginn()));
+    }
     bestrahlung.setApplikationsart(generateApplikationsart());
     return bestrahlung;
   }
 
-  private XMLGregorianCalendar generateBeginnDatum(XMLGregorianCalendar birthdate){
+  private XMLGregorianCalendar generateBeginnDatum(XMLGregorianCalendar birthdate) {
     Random randomDays = new Random();
-    int daysToAdd = randomDays.nextInt(18262);
-    XMLGregorianCalendar beginn;
+    Date currentDate = new Date();
+    int daysToAdd = randomDays.nextInt(((currentDate.getYear() + 1900) - birthdate.getYear()) * 365);
     GregorianCalendar minGregorianCalendar = new GregorianCalendar();
-    minGregorianCalendar.set(birthdate.getYear(),birthdate.getMonth(),birthdate.getDay());
-    minGregorianCalendar.add(Calendar.DAY_OF_MONTH,daysToAdd);
+    minGregorianCalendar.set(birthdate.getYear(), birthdate.getMonth(), birthdate.getDay());
+    minGregorianCalendar.add(Calendar.DAY_OF_MONTH, daysToAdd);
+    XMLGregorianCalendar beginn;
     try {
       beginn = DatatypeFactory.newInstance().newXMLGregorianCalendar(minGregorianCalendar);
     } catch (DatatypeConfigurationException e) {

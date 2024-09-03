@@ -1,9 +1,6 @@
 package de.samply.generator;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.samply.model.DatumTagOderMonatOderJahrOderNichtGenauTyp;
-import de.samply.model.OBDS;
-import de.samply.model.OBDS.MengeMelder;
 import de.samply.model.OBDS.MengePatient.Patient;
 import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung;
 import de.samply.model.PatientenStammdatenMelderTyp;
@@ -35,8 +32,6 @@ public class PatientGenerator {
 
 
   public Patient createPatient(){
-    //TODO
-
     Patient patient = new Patient();
     patient.setPatientID("testpatient" + this.count++);
     patient.setPatientenStammdaten(createPatientStammdaten());
@@ -45,9 +40,7 @@ public class PatientGenerator {
   }
 
   private PatientenStammdatenMelderTyp createPatientStammdaten() {
-    //TODO
     PatientenStammdatenMelderTyp patientenStammdaten = new PatientenStammdatenMelderTyp();
-
     patientenStammdaten.setGeschlecht(generateGeschlecht());
     patientenStammdaten.setGeburtsdatum(generateGeburtsdatum());
     if(patientenStammdaten.getGeschlecht().equals("S")||patientenStammdaten.getGeschlecht().equals("U")){
@@ -73,7 +66,7 @@ public class PatientGenerator {
   }
 
   private int generateAlter() {
-    return Integer.valueOf(randomValuesGenerator.generate(ProbabilityType.AGE));
+    return Integer.parseInt(randomValuesGenerator.generate(ProbabilityType.AGE));
   }
 
   private DatumTagOderMonatOderJahrOderNichtGenauTyp generateGeburtsdatum() {

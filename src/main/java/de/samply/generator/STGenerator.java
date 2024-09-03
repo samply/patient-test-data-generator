@@ -1,17 +1,9 @@
 package de.samply.generator;
-import de.samply.model.HistologieTyp;
-import de.samply.model.OBDS;
-import de.samply.model.OBDS;
-import de.samply.model.OBDS.MengeMelder;
-import de.samply.model.OBDS.MengePatient.Patient;
-import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung;
-import de.samply.model.OBDS.MengePatient.Patient.MengeMeldung.Meldung;
+
 import de.samply.model.STTyp;
 import de.samply.model.STTyp.MengeBestrahlung;
-import de.samply.model.TumorzuordnungTyp;
 import de.samply.probabilities.ProbabilityType;
 import de.samply.random.RandomValuesGenerator;
-import java.util.Random;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
