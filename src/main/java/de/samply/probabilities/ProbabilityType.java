@@ -2,5 +2,18 @@ package de.samply.probabilities;
 
 public enum ProbabilityType {
     GENDER,
-    AGE
+    AGE,
+    FIRST_NAME_FEMALE,
+    FIRST_NAME_MALE,
+    LAST_NAME,
+    INTENTION,
+    STELLUNG_OP,
+    ENDE_GRUND,
+    NEBENWIRKUNG_GRAD,
+    NEBENWIRKUNG_VERSION,
+    RESIDUALSTATUS,
+    APPLIKATIONSART,
+    ST_ZIELGEBIET,
+    EINHEIT,
+
 }

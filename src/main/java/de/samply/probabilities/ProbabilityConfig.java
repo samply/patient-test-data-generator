@@ -49,8 +49,6 @@ public class ProbabilityConfig {
     }
 
     public Optional<List<DistributionUnit>> getDistribution(ProbabilityType type) {
-        return Optional.of(this.distributions.get(type.toString()));
+        return Optional.ofNullable(this.distributions.get(type.toString()));
     }
-
-
 }

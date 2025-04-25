@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.1 - 2024-04-16]
+## [0.0.1 - 2024-09-03]
 
 ### Added
 - gitignore
@@ -19,3 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Write test data in temporal file (serialization through XmlMapper)
 - Probability Config
 - RandomValuesGenerator
+- Generate Birthdate from range
+- Generate Last Name
+- Generate First Name with genderspecification
+- Generate Histologie
+- Generate SYST
+- Generate ST
+- Generate Nebenwirkung
+- Generate OP
+- Generate Bestrahlung
+- Generate Testdata with specified Number of Patients
